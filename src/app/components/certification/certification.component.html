@@ -1,0 +1,42 @@
+
+<article class="education-section animated fadeIn" id="certification">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex">
+        <a class="ml-auto" [routerLink]="'education'"><span class="btn btn-outline-danger">Back</span></a>
+      </div>
+      <div class="col-12">
+        <h3 class="text-center">CERTIFICATIONS</h3>
+      </div>
+    </div>
+    <div class="card mb-3 mt-5">
+
+      <div class="row mt-5">
+
+        <div class="col-sm-12 col-md-6 col-lg-6" *ngFor="let certification of certifications">
+          <div class="row g-0">
+            <div class="col-10 col-sm-4 col-md-10 col-lg-4">
+              <img class="img-fluid d-block mx-auto" [src]="certification['image']" [alt]="certification['name']">
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-8">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-10">
+                    <h5 class="card-title text-center">{{certification['name']}}</h5> 
+                  </div>
+                  <div class="col-1">
+                    <a [href]="certification['link']" target="_blank"><i class="fas fa-external-link-alt text-pink"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+        
+    </div>
+  </div>
+  
+</article>
+
