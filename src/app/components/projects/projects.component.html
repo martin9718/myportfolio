@@ -5,9 +5,9 @@
     <div class="container">
         <h3 class="text-center">PORTFOLIO</h3>
         <div class="row mt-5">
-            <div *ngFor="let project of projects" class="col-sm-12 col-md-6 col-lg-4 mt-5">
+            <div *ngFor="let project of projects; let idx = index" class="col-sm-12 col-md-6 col-lg-4 mt-5">
                 <div class="card mb-3" style="width: 100%;">
-                    <img class="card-img-top img-fluid c-pointer" [src]="url+project['image']" alt="project['name']">
+                    <img class="card-img-top img-fluid c-pointer" [src]="'assets/img/'+project['image']" alt="project['name']">
                     <div class="card-body text-center">
                         <h5 class="card-title"><strong>{{ project['name'] }}</strong></h5>
                         <p class="card-text">{{ project['description'] }}</p>
